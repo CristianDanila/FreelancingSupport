@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,5 +34,9 @@ public class ProjectBookingController {
 
 		return bookings.stream().filter(x -> x.getTotalPrice() >= price).collect(Collectors.toList());
 	}
-
+	@RequestMapping(value = "/create", method = RequestMethod.POST)
+	public List<ProjectBooking> create(@RequestBody ProjectBooking projectBooking){
+		bookings.add(projectBooking);
+		return bookings;
+	}
 }
