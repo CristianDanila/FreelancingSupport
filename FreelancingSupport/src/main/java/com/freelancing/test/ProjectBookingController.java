@@ -38,7 +38,7 @@ public class ProjectBookingController {
 		return bookingRepository.findAll();
 	}
 
-	@RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/delete/{id}", method = RequestMethod.POST)
 	public List<ProjectBooking> remove(@PathVariable long id) {
 		bookingRepository.deleteById(id);
 

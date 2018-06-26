@@ -25,7 +25,7 @@ public class DatabaseSeeder implements CommandLineRunner{
 		
 		bookings.add(new ProjectBooking("Cars Website", "Philip Lon", 5, 101.1));
 		bookings.add(new ProjectBooking("Plane web application", "Lara Kroft", 4, 332.11));
-		bookings.add(new ProjectBooking("Toys Wordpress Website", "Ion Stefan", 2, 280.20));
+		bookings.add(new ProjectBooking("Toys Wordpress Website", "Ion Stefan", 2, 1180.20));
 		
 		bookingRepository.saveAll(bookings);
 	}
