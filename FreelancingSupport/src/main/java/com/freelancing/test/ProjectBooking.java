@@ -19,6 +19,7 @@ public class ProjectBooking {
 
 	public ProjectBooking(){}
 
+	public ProjectBooking() {}
 	public ProjectBooking(String projectName, String projectOwner, int projectSprint, double projectSprintPrice) {
 		super();
 		this.projectName = projectName;
